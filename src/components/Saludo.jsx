@@ -4,9 +4,13 @@ export default function Saludo() {
   const [nombre, setNombre] = useState('');
   const [saludo, setSaludo] = useState('');
 
-  const handleInputChange = (event) => {
-    setNombre(event.target.value);
+  const handleInputChange = (e) => {
+    setNombre(e.target.value);
   };
+  /*con desestructuracion
+  const handleInputChange = ({ target }) => {
+  setNombre(target.value);
+};*/
 
   const saludar = () => {
     if (nombre.trim() !== '') {
